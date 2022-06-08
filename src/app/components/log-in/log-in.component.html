@@ -1,0 +1,29 @@
+<p>log-in works!</p>
+<div class="login">
+    <mat-card class="login-card">
+        <mat-card-title class="title">{{title}}</mat-card-title>
+        <mat-card-content>
+            <form #loginForm="ngForm" [formGroup]="form">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Е-адреса</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Лозинка</mat-label>
+                        <input matInput formControlName="password" type="password">
+                    </mat-form-field>
+                </p>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="center">
+            <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!loginForm.form.valid">ПРИЈАВИ СЕ</button>
+        </mat-card-actions>
+        <hr>
+        <div class="center">
+            <button class="center" [routerLink] = "['/sign-up']" mat-raised-button color="primary">КРЕИРАЊЕ НАЛОГА</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,40 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.login-card {
+    max-width: fit-content;
+    padding: 50px;
+    margin: auto;
+}
+
+.login {
+    margin: 100px;
+}
+
+::ng-deep.special-date {
+    background-color: rgba(255, 0, 0, 0.547);
+    border-radius: 100%;
+}
+
+a:visited {
+    color: pink;
+}
+
+a {
+    color: pink;
+}
+
+.center-hor {
+    margin: 0px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
