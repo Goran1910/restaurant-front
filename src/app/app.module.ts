@@ -18,10 +18,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RestaurantsPageComponent } from './components/restaurants-page/restaurants-page.component';
+import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
+import { ManagersPageComponent } from './components/managers-page/managers-page.component';
+import { RestaurantComponent } from './components/restaurant/restaurant.component';
 
 const appRoutes: Routes = [
   { path: '', component: LogInComponent },
-  { path: 'sign-up', component: SignUpComponent}
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'restaurants', component: RestaurantsPageComponent },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'inventory', component: InventoryPageComponent },
+  { path: 'managers', component: ManagersPageComponent }
 ];
 
 @NgModule({
@@ -29,7 +39,11 @@ const appRoutes: Routes = [
     AppComponent,
     LogInComponent,
     SignUpComponent,
-    HeaderComponent
+    HeaderComponent,
+    RestaurantsPageComponent,
+    ProfilePageComponent,
+    InventoryPageComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +57,8 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [
     {

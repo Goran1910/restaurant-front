@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+span {
+    color: #999999;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+span.left {
+    margin-left: 20px;
+}
+
+mat-toolbar {
+    background-color: #222222;
+}

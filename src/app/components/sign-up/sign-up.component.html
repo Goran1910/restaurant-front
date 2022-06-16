@@ -1,1 +1,47 @@
-<p>sign-up works!</p>
+<div class="sign-up">
+    <mat-card class="sign-up-card">
+        <mat-card-title class="title">{{title}}</mat-card-title>
+        <mat-card-content>
+            <form #signUpForm="ngForm" [formGroup]="form">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Корисничко име</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Е-адреса</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Лозинка</mat-label>
+                        <input matInput formControlName="password" type="password">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Потврдите лозинку</mat-label>
+                        <input matInput formControlName="passwordAgain" type="password">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Број телефона</mat-label>
+                        <input matInput formControlName="phoneNumber">
+                    </mat-form-field>
+                </p>
+            </form>
+            <p class="error center" *ngIf="error">{{errorText}}</p>
+        </mat-card-content>
+        <mat-card-actions class="center">
+            <button mat-raised-button color="primary" class="action" (click)="onSubmit()" [disabled]="!signUpForm.form.valid">НАПРАВИ НАЛОГ</button>
+        </mat-card-actions>
+        <hr>
+        <div class="center">
+            <button class="center login-sign-nav" [routerLink] = "['/']" mat-raised-button color="primary">ПРИЈАВЉИВАЊЕ</button>
+        </div>
+    </mat-card>
+</div>

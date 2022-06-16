@@ -1,1 +1,10 @@
-<p>header works!</p>
+<mat-toolbar *ngIf="accountService.isLogged()">
+    <span [routerLink]="['restaurants']">Наша авлија</span>
+    <span class="left" [routerLink]="['restaurants']">Ресторани</span>
+    <span class="left" [routerLink]="['inventory']" *ngIf="accountService.isManager()">Преглед залиха</span>
+    <span class="left" [routerLink]="['managers']" *ngIf="accountService.isAdmin()">Налози менаџера</span>
+    <span class="example-spacer"></span>
+    <span class="left" [routerLink]="['profile']">Налог</span>
+    <span class="left" (click)="logout()">Одјави се</span>
+</mat-toolbar>
+

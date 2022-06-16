@@ -1,0 +1,45 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.sign-up-card {
+    max-width: fit-content;
+    padding: 50px;
+    margin: auto;
+    border: 1px solid #999999;
+}
+
+.sign-up {
+    margin: 100px;
+}
+
+::ng-deep.special-date {
+    background-color: rgba(255, 0, 0, 0.547);
+    border-radius: 100%;
+}
+
+a:visited {
+    color: pink;
+}
+
+a {
+    color: pink;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-sign-nav {
+    background-color: #60A917;
+}
+
+.action {
+    background-color: #66BBFF;
+}
+
+.error {
+    color: red;
+}
