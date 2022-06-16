@@ -1,13 +1,18 @@
 <mat-card class="rest-card">
-    <mat-card-title class="title">{{restaurant.name}}</mat-card-title>
+    <mat-card-title class="header">
+        <h2 class="title">{{restaurant.name}}</h2>
+        <div class="edit-buttons">
+            <button mat-raised-button class="action" *ngIf="accountService.isAdmin()">Измени</button>
+            <button mat-raised-button class="action delete" *ngIf="accountService.isAdmin()">Обриши</button>
+        </div>
+    </mat-card-title>
     <mat-card-content>
         <img src={{restaurant.imagePath}}/>
+
     </mat-card-content>
-    <mat-card-actions class="center">
-        <button mat-raised-button class="action">Резервација стола</button>
-        <button mat-raised-button class="action">Резервација прослава</button>
-        <button mat-raised-button class="action">Преглед јеловника</button>
-        <button mat-raised-button class="action">Коментари</button>
-        <button mat-raised-button class="action" *ngIf="accountService.isManager()">Преглед заузетости столова</button>
-    </mat-card-actions>
+    <button mat-raised-button class="action">Резервација стола</button>
+    <button mat-raised-button class="action">Резервација прослава</button>
+    <button mat-raised-button class="action">Преглед јеловника</button>
+    <button mat-raised-button class="action">Коментари</button>
+    <button mat-raised-button class="action" *ngIf="accountService.isManager()">Преглед заузетости столова</button> 
 </mat-card>

@@ -24,6 +24,7 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
 import { ManagersPageComponent } from './components/managers-page/managers-page.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
+import { BarRatingModule } from "ngx-bar-rating";
 
 const appRoutes: Routes = [
   { path: '', component: LogInComponent },
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    BarRatingModule
   ],
   providers: [
     {
