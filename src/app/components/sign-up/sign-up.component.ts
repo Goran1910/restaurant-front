@@ -1,7 +1,7 @@
 import { BooleanInput } from '@angular/cdk/coercion';
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/entity/User';
 import { AccountService } from 'src/app/services/account.service';
@@ -15,11 +15,11 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SignUpComponent implements OnInit {
 
   title: string = 'Креирање налога';
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   error: BooleanInput = false;
   errorText: string = '';
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: UntypedFormBuilder,
     private accountService: AccountService,
     private authService: AuthService,
     private router: Router) { }
