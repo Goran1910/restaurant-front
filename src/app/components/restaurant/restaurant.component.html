@@ -8,9 +8,9 @@
     </mat-card-title>
     <mat-card-content>
         <img src={{restaurant.imagePath}}/>
-
+        Просечна оцена: {{restaurant.averageRating}}
     </mat-card-content>
-    <button mat-raised-button class="action">Резервација стола</button>
+    <button mat-raised-button class="action" (click)="opetReserveTableDialog()">Резервација стола</button>
     <button mat-raised-button class="action">Резервација прослава</button>
     <button mat-raised-button class="action">Преглед јеловника</button>
     <button mat-raised-button class="action">Коментари</button>

@@ -1,0 +1,24 @@
+<div class="reserve-table">
+    <mat-card class="reserve-table-card">
+        <mat-card-title class="title">Резервација стола за {{name}}</mat-card-title>
+        <mat-card-content>
+            <form #reserveForm="ngForm" [formGroup]="form">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Број места</mat-label>
+                        <input matInput formControlName="numOfPeople">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Датум и време</mat-label>
+                        <input matInput formControlName="date" type="datetime-local">
+                    </mat-form-field>
+                </p>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="center">
+            <button mat-raised-button color="primary" class="action" (click)="onSubmit()" [disabled]="!reserveForm.form.valid">РЕЗЕРВИШИ</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
