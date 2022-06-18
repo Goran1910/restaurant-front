@@ -16,3 +16,11 @@
 .action {
     background-color: #66BBFF;
 }
+
+.good{
+    color: rgba(67, 255, 67, 0.744);
+}
+
+.error{
+    color: rgba(255, 48, 48, 0.897);
+}

@@ -16,6 +16,8 @@
                     </mat-form-field>
                 </p>
             </form>
+            <p *ngIf="showSuccMessage" class="good">{{message}}</p>
+            <p *ngIf="showErrorMessage" class="error">{{message}}</p>
         </mat-card-content>
         <mat-card-actions class="center">
             <button mat-raised-button color="primary" class="action" (click)="onSubmit()" [disabled]="!reserveForm.form.valid">РЕЗЕРВИШИ</button>

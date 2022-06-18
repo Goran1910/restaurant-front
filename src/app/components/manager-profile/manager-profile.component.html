@@ -1,0 +1,17 @@
+<div class="manager">
+    <mat-card class="manager-card">
+        <mat-card-title class="header">
+            <h2 class="title">{{manager.username}}</h2>
+            <div class="edit-buttons">
+                <button mat-raised-button class="action">Измени</button>
+                <button mat-raised-button class="action delete">Обриши</button>
+            </div>
+        </mat-card-title>
+        <mat-card-content>
+            <p>Е-адреса: {{manager.email}}</p>
+            <p>Ресторани: {{formRestaurantNames()}}</p>
+        </mat-card-content>
+        <mat-card-actions class="center">
+        </mat-card-actions>
+    </mat-card>
+</div>

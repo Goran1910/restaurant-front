@@ -1,1 +1,4 @@
-<p>managers-page works!</p>
+<h1>Менаџери</h1>
+<section class="managers">
+    <app-manager-profile *ngFor="let manager of managers" [manager]="manager"></app-manager-profile>
+</section>

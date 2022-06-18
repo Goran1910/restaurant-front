@@ -19,5 +19,4 @@ export class HeaderComponent implements OnInit {
     this.accountService.currentUser = null;
     this.authService.logout();
   }
-
 }

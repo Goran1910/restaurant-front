@@ -1,9 +1,9 @@
 <mat-card class="rest-card">
     <mat-card-title class="header">
         <h2 class="title">{{restaurant.name}}</h2>
-        <div class="edit-buttons">
-            <button mat-raised-button class="action" *ngIf="accountService.isAdmin()">Измени</button>
-            <button mat-raised-button class="action delete" *ngIf="accountService.isAdmin()">Обриши</button>
+        <div class="edit-buttons" *ngIf="accountService.isAdmin()">
+            <button mat-raised-button class="action">Измени</button>
+            <button mat-raised-button class="action delete">Обриши</button>
         </div>
     </mat-card-title>
     <mat-card-content>

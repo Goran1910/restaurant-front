@@ -17,6 +17,9 @@ export class ReserveTableDialogComponent implements OnInit {
 
   name: string = '';
   form!: UntypedFormGroup;
+  showSuccMessage: Boolean = false;
+  showErrorMessage: Boolean = false;
+  message: string = '';
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: TableReservationData,
    private formBuilder: UntypedFormBuilder, 
@@ -33,8 +36,15 @@ export class ReserveTableDialogComponent implements OnInit {
 
   onSubmit() {
     var request = new TableReservationRequest(this.form.value.numOfPeople, this.form.value.date, this.name);
-    this.restaurantService.createTableReservation(request).subscribe((res) => {
-      console.log(res);
+    this.restaurantService.createTableReservation(request).subscribe(
+      (res) => {
+      this.showSuccMessage = true;
+      this.showErrorMessage = false;
+      this.message = 'Успешно сте резервисали сто.'
+    }, (error) => {
+      this.showErrorMessage = true;
+      this.showSuccMessage = false;
+      this.message = 'Нема слободних столова у задатом термину.'
     });
   }
 

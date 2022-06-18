@@ -1,28 +1,33 @@
-.rest-card {
-    max-width: 600px;
-    border: 1px solid #999999;
-    margin: 50px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .title {
     display: inline;
     color: white;
     padding: 10px;
     background-color: #008CFF;
-    /* margin: 10px; */
+    margin: 10px;
     border-radius: 10px;
     position: relative;
     top: -35px;
 }
 
+.manager-card {
+    max-width: 600px;
+    border: 1px solid #999999;
+    margin: 50px;
+}
+
+.manager {
+    margin: 100px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 

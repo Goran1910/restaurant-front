@@ -27,6 +27,8 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 import { BarRatingModule } from "ngx-bar-rating";
 import { ReserveTableDialogComponent } from './components/reserve-table-dialog/reserve-table-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ManagerProfileComponent } from './components/manager-profile/manager-profile.component';
+import { GenerateReportComponent } from './components/generate-report/generate-report.component';
 
 const appRoutes: Routes = [
   { path: '', component: LogInComponent },
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
   { path: 'restaurants', component: RestaurantsPageComponent },
   { path: 'profile', component: ProfilePageComponent },
   { path: 'inventory', component: InventoryPageComponent },
-  { path: 'managers', component: ManagersPageComponent }
+  { path: 'managers', component: ManagersPageComponent },
+  { path: 'report', component: GenerateReportComponent }
 ];
 
 @NgModule({
@@ -47,7 +50,10 @@ const appRoutes: Routes = [
     ProfilePageComponent,
     InventoryPageComponent,
     RestaurantComponent,
-    ReserveTableDialogComponent
+    ReserveTableDialogComponent,
+    ManagersPageComponent,
+    ManagerProfileComponent,
+    GenerateReportComponent
   ],
   imports: [
     BrowserModule,
